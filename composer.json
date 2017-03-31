@@ -16,11 +16,11 @@
     },
     "require": {
         "flarum/core": "^0.1.0-beta.6",
-        "league/oauth2-github": "^0.2.0"
+        "zhaoweizhong/oauth2-cas": "^6.0.0"
     },
     "autoload": {
         "psr-4": {
-            "Flarum\\Auth\\GitHub\\": "src/"
+            "Zhaoweizhong\\Auth\\CAS\\": "src/"
         }
     },
     "extra": {

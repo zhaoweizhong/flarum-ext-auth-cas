@@ -1,6 +1,6 @@
 'use strict';
 
-System.register('zhaoweizhong/auth/cas/components/CASSettingsModal', ['zhaoweizhong/components/SettingsModal'], function (_export, _context) {
+System.register('zhaoweizhong/auth/cas/components/CASSettingsModal', ['flarum/components/SettingsModal'], function (_export, _context) {
   "use strict";
 
   var SettingsModal, CASSettingsModal;

@@ -1,4 +1,4 @@
-import SettingsModal from 'zhaoweizhong/components/SettingsModal';
+import SettingsModal from 'flarum/components/SettingsModal';
 
 export default class CASSettingsModal extends SettingsModal {
   className() {

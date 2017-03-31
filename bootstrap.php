@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-use Flarum\Auth\CAS\Listener;
+use Zhaoweizhong\Auth\CAS\Listener;
 use Illuminate\Contracts\Events\Dispatcher;
 
 return function (Dispatcher $events) {

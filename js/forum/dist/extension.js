@@ -1,6 +1,6 @@
 'use strict';
 
-System.register('zhaoweizhong/auth/cas/main', ['flarum/extend', 'flarum/app', 'zhaoweizhong/components/LogInButtons', 'zhaoweizhong/components/LogInButton'], function (_export, _context) {
+System.register('zhaoweizhong/auth/cas/main', ['flarum/extend', 'flarum/app', 'flarum/components/LogInButtons', 'flarum/components/LogInButton'], function (_export, _context) {
   "use strict";
 
   var extend, app, LogInButtons, LogInButton;
