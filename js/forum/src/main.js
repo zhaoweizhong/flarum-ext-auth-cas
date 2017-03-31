@@ -5,7 +5,7 @@ import LogInButton from 'flarum/components/LogInButton';
 
 app.initializers.add('zhaoweizhong-auth-cas', () => {
   extend(LogInButtons.prototype, 'items', function(items) {
-    items.add('cas',
+    items.add('callback',
       <LogInButton
         className="Button LogInButton--cas"
         icon="lock"
