@@ -8,12 +8,12 @@
  * file that was distributed with this source code.
  */
 
-    namespace Flarum\Auth\CAS;
+    namespace Zhaoweizhong\Auth\CAS;
 
 use Flarum\Forum\AuthenticationResponseFactory;
 use Flarum\Forum\Controller\AbstractOAuth2Controller;
 use Flarum\Settings\SettingsRepositoryInterface;
-use League\OAuth2\Client\Provider\CAS;
+use Zhaoweizhong\Oauth2\Provider\CAS;
 use League\OAuth2\Client\Provider\ResourceOwnerInterface;
 
 class CASAuthController extends AbstractOAuth2Controller

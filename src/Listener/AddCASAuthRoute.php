@@ -8,7 +8,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Flarum\Auth\CAS\Listener;
+namespace Zhaoweizhong\Auth\CAS\Listener;
 
 use Flarum\Event\ConfigureForumRoutes;
 use Illuminate\Contracts\Events\Dispatcher;
