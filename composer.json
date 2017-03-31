@@ -1,5 +1,5 @@
 {
-    "name": “zhaoweizhong/flarum-ext-auth-cas",
+    "name": "zhaoweizhong/flarum-ext-auth-cas",
     "description": "Allow users to log in with SUSTC CAS.",
     "type": "flarum-extension",
     "keywords": ["authentication"],
