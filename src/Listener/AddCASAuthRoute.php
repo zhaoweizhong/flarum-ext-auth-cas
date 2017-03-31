@@ -28,6 +28,6 @@ class AddCASAuthRoute
      */
     public function configureForumRoutes(ConfigureForumRoutes $event)
     {
-        $event->get('/auth/callback', 'auth.cas', 'Zhaoweizhong\Auth\CAS\CASAuthController');
+        $event->get('/auth/cas', 'auth.cas', 'Zhaoweizhong\Auth\CAS\CASAuthController');
     }
 }

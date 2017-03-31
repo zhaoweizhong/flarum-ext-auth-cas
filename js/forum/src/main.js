@@ -5,11 +5,11 @@ import LogInButton from 'flarum/components/LogInButton';
 
 app.initializers.add('zhaoweizhong-auth-cas', () => {
   extend(LogInButtons.prototype, 'items', function(items) {
-    items.add('callback',
+    items.add('cas',
       <LogInButton
         className="Button LogInButton--cas"
         icon="lock"
-        path="/auth/callback">
+        path="/auth/cas">
         {app.translator.trans('flarum-auth-cas.forum.log_in.with_cas_button')}
       </LogInButton>
     );

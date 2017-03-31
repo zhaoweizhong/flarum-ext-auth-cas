@@ -1,6 +1,6 @@
 'use strict';
 
-System.register('zhaoweizhong/auth/callback/components/CASSettingsModal', ['flarum/components/SettingsModal'], function (_export, _context) {
+System.register('zhaoweizhong/auth/cas/components/CASSettingsModal', ['flarum/components/SettingsModal'], function (_export, _context) {
   "use strict";
 
   var SettingsModal, CASSettingsModal;
@@ -60,7 +60,7 @@ System.register('zhaoweizhong/auth/callback/components/CASSettingsModal', ['flar
 });;
 'use strict';
 
-System.register('zhaoweizhong/auth/callback/main', ['flarum/app', 'zhaoweizhong/auth/callback/components/CASSettingsModal'], function (_export, _context) {
+System.register('zhaoweizhong/auth/cas/main', ['flarum/app', 'zhaoweizhong/auth/cas/components/CASSettingsModal'], function (_export, _context) {
   "use strict";
 
   var app, CASSettingsModal;
