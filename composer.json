@@ -1,0 +1,39 @@
+{
+    "name": “zhaoweizhong/flarum-ext-auth-cas",
+    "description": "Allow users to log in with SUSTC CAS.",
+    "type": "flarum-extension",
+    "keywords": ["authentication"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Zhaowei Zhong",
+            "email": "zhong98zhaowei@gmail.com"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/zhaoweizhong/flarum-ext-auth-cas/issues",
+        "source": "https://github.com/zhaoweizhong/flarum-ext-auth-cas"
+    },
+    "require": {
+        "flarum/core": "^0.1.0-beta.6",
+        "league/oauth2-github": "^0.2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Flarum\\Auth\\GitHub\\": "src/"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "0.1.x-dev"
+        },
+        "flarum-extension": {
+            "title": "CAS登录",
+            "icon": {
+                "name": "lock",
+                "backgroundColor": "#eee",
+                "color": "#12484b"
+            }
+        }
+    }
+}
