@@ -33,14 +33,14 @@ class AddClientAssets
                 __DIR__.'/../../js/forum/dist/extension.js',
                 __DIR__.'/../../less/forum/extension.less'
             ]);
-            $event->addBootstrapper('flarum/auth/cas/main');
+            $event->addBootstrapper('zhaoweizhong/auth/cas/main');
         }
 
         if ($event->isAdmin()) {
             $event->addAssets([
                 __DIR__.'/../../js/admin/dist/extension.js'
             ]);
-            $event->addBootstrapper('flarum/auth/cas/main');
+            $event->addBootstrapper('zhaoweizhong/auth/cas/main');
         }
     }
 }

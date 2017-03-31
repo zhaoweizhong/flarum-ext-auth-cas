@@ -39,8 +39,8 @@ class CASAuthController extends AbstractOAuth2Controller
     protected function getProvider($redirectUri)
     {
         return new CAS([
-            'clientId'     => $this->settings->get('flarum-auth-cas.client_id'),
-            'clientSecret' => $this->settings->get('flarum-auth-cas.client_secret'),
+            'clientId'     => $this->settings->get('zhaoweizhong-auth-cas.client_id'),
+            'clientSecret' => $this->settings->get('zhaoweizhong-auth-cas.client_secret'),
             'redirectUri'  => $redirectUri
         ]);
     }

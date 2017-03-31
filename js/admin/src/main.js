@@ -1,7 +1,7 @@
 import app from 'flarum/app';
 
-import CASSettingsModal from 'flarum/auth/cas/components/CASSettingsModal';
+import CASSettingsModal from 'zhaoweizhong/auth/cas/components/CASSettingsModal';
 
-app.initializers.add('flarum-auth-cas', () => {
-  app.extensionSettings['flarum-auth-cas'] = () => app.modal.show(new CASSettingsModal());
+app.initializers.add('zhaoweizhong-auth-cas', () => {
+  app.extensionSettings['zhaoweizhong-auth-cas'] = () => app.modal.show(new CASSettingsModal());
 });

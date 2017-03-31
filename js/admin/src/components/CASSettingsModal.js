@@ -1,4 +1,4 @@
-import SettingsModal from 'flarum/components/SettingsModal';
+import SettingsModal from 'zhaoweizhong/components/SettingsModal';
 
 export default class CASSettingsModal extends SettingsModal {
   className() {
@@ -13,12 +13,12 @@ export default class CASSettingsModal extends SettingsModal {
     return [
       <div className="Form-group">
         <label>{app.translator.trans('flarum-auth-cas.admin.cas_settings.client_id_label')}</label>
-        <input className="FormControl" bidi={this.setting('flarum-auth-cas.client_id')}/>
+        <input className="FormControl" bidi={this.setting('zhaoweizhong-auth-cas.client_id')}/>
       </div>,
 
       <div className="Form-group">
         <label>{app.translator.trans('flarum-auth-cas.admin.cas_settings.client_secret_label')}</label>
-        <input className="FormControl" bidi={this.setting('flarum-auth-cas.client_secret')}/>
+        <input className="FormControl" bidi={this.setting('zhaoweizhong-auth-cas.client_secret')}/>
       </div>
     ];
   }

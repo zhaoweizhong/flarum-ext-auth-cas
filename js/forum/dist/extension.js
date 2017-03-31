@@ -1,6 +1,6 @@
 'use strict';
 
-System.register('flarum/auth/cas/main', ['flarum/extend', 'flarum/app', 'flarum/components/LogInButtons', 'flarum/components/LogInButton'], function (_export, _context) {
+System.register('zhaoweizhong/auth/cas/main', ['flarum/extend', 'flarum/app', 'zhaoweizhong/components/LogInButtons', 'zhaoweizhong/components/LogInButton'], function (_export, _context) {
   "use strict";
 
   var extend, app, LogInButtons, LogInButton;
@@ -16,7 +16,7 @@ System.register('flarum/auth/cas/main', ['flarum/extend', 'flarum/app', 'flarum/
     }],
     execute: function () {
 
-      app.initializers.add('flarum-auth-cas', function () {
+      app.initializers.add('zhaoweizhong-auth-cas', function () {
         extend(LogInButtons.prototype, 'items', function (items) {
           items.add('cas', m(
             LogInButton,

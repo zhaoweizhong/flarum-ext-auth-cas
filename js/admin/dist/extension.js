@@ -1,6 +1,6 @@
 'use strict';
 
-System.register('flarum/auth/cas/components/CASSettingsModal', ['flarum/components/SettingsModal'], function (_export, _context) {
+System.register('zhaoweizhong/auth/cas/components/CASSettingsModal', ['zhaoweizhong/components/SettingsModal'], function (_export, _context) {
   "use strict";
 
   var SettingsModal, CASSettingsModal;
@@ -38,7 +38,7 @@ System.register('flarum/auth/cas/components/CASSettingsModal', ['flarum/componen
                 null,
                 app.translator.trans('flarum-auth-cas.admin.cas_settings.client_id_label')
               ),
-              m('input', { className: 'FormControl', bidi: this.setting('flarum-auth-cas.client_id') })
+              m('input', { className: 'FormControl', bidi: this.setting('zhaoweizhong-auth-cas.client_id') })
             ), m(
               'div',
               { className: 'Form-group' },
@@ -47,7 +47,7 @@ System.register('flarum/auth/cas/components/CASSettingsModal', ['flarum/componen
                 null,
                 app.translator.trans('flarum-auth-cas.admin.cas_settings.client_secret_label')
               ),
-              m('input', { className: 'FormControl', bidi: this.setting('flarum-auth-cas.client_secret') })
+              m('input', { className: 'FormControl', bidi: this.setting('zhaoweizhong-auth-cas.client_secret') })
             )];
           }
         }]);
@@ -60,7 +60,7 @@ System.register('flarum/auth/cas/components/CASSettingsModal', ['flarum/componen
 });;
 'use strict';
 
-System.register('flarum/auth/cas/main', ['flarum/app', 'flarum/auth/cas/components/CASSettingsModal'], function (_export, _context) {
+System.register('zhaoweizhong/auth/cas/main', ['flarum/app', 'zhaoweizhong/auth/cas/components/CASSettingsModal'], function (_export, _context) {
   "use strict";
 
   var app, CASSettingsModal;
@@ -72,8 +72,8 @@ System.register('flarum/auth/cas/main', ['flarum/app', 'flarum/auth/cas/componen
     }],
     execute: function () {
 
-      app.initializers.add('flarum-auth-cas', function () {
-        app.extensionSettings['flarum-auth-cas'] = function () {
+      app.initializers.add('zhaoweizhong-auth-cas', function () {
+        app.extensionSettings['zhaoweizhong-auth-cas'] = function () {
           return app.modal.show(new CASSettingsModal());
         };
       });
