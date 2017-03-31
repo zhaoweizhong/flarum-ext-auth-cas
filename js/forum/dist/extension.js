@@ -23,7 +23,7 @@ System.register('zhaoweizhong/auth/cas/main', ['flarum/extend', 'flarum/app', 'f
             {
               className: 'Button LogInButton--cas',
               icon: 'lock',
-              path: '/auth/cas' },
+              path: '/auth/callback' },
             app.translator.trans('flarum-auth-cas.forum.log_in.with_cas_button')
           ));
         });
