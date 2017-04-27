@@ -71,7 +71,7 @@ class CASResourceOwner implements ResourceOwnerInterface
      */
     public function getNickname()
     {
-        return $this->getValueByKey($this->response, 'login');
+        return $this->getValueByKey($this->response, 'fullName');
     }
 
     /**
