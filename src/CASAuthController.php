@@ -14,6 +14,7 @@ use Flarum\Forum\AuthenticationResponseFactory;
 use Flarum\Forum\Controller\AbstractOAuth2Controller;
 use Flarum\Settings\SettingsRepositoryInterface;
 use Zhaoweizhong\Auth\CAS\Provider\CAS;
+use Zhaoweizhong\Auth\CAS\Provider\CASResourceOwner;
 use League\OAuth2\Client\Provider\ResourceOwnerInterface;
 
 class CASAuthController extends AbstractOAuth2Controller
@@ -59,7 +60,7 @@ class CASAuthController extends AbstractOAuth2Controller
     protected function getIdentification(ResourceOwnerInterface $resourceOwner)
     {
         return [
-            'email' => $resourceOwner->getEmail() ?: $this->getEmailFromApi()
+            'email' => $this->getEmailFromApi()
         ];
     }
 
@@ -68,8 +69,15 @@ class CASAuthController extends AbstractOAuth2Controller
      */
     protected function getSuggestions(ResourceOwnerInterface $resourceOwner)
     {
+        $url = $this->provider->apiDomain.'/cas/oauth2.0/profile';
+
+        $username = $this->provider->getResponse(
+            $this->provider->getAuthenticatedRequest('GET', $url, $this->token)
+        );
+
+
         return [
-            'username' => $resourceOwner->getNickname(),
+            'username' => $username['fullName'],
             'avatarUrl' => 'https://bbs.sustech.net/assets/avatars/default.jpg'
         ];
     }
