@@ -60,7 +60,7 @@ class CASAuthController extends AbstractOAuth2Controller
     protected function getIdentification(ResourceOwnerInterface $resourceOwner)
     {
         return [
-            'email' => $resourceOwner->getNickname()
+            'email' => $this->getEmailFromApi()
         ];
     }
 
@@ -83,6 +83,6 @@ class CASAuthController extends AbstractOAuth2Controller
             $this->provider->getAuthenticatedRequest('GET', $url, $this->token)
         );
 
-            return $email['email'];
+            return $email['fullName'];
     }
 }
