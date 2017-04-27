@@ -60,7 +60,7 @@ class CASAuthController extends AbstractOAuth2Controller
     protected function getIdentification(ResourceOwnerInterface $resourceOwner)
     {
         return [
-            'email' => '11611722@mail.sustc.edu.cn'
+            'email' => $resourceOwner->getNickname()
         ];
     }
 
@@ -70,7 +70,7 @@ class CASAuthController extends AbstractOAuth2Controller
     protected function getSuggestions(ResourceOwnerInterface $resourceOwner)
     {
         return [
-            'username' => 'dwfwefew',
+            'username' => $resourceOwner->getNickname(),
             'avatarUrl' => 'https://bbs.sustech.net/assets/avatars/default.jpg'
         ];
     }
