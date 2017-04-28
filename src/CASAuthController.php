@@ -82,6 +82,6 @@ class CASAuthController extends AbstractOAuth2Controller
             $this->provider->getAuthenticatedRequest('GET', $url, $this->token)
         );
 
-            return $email['sid'];
+            return $email['id'];
     }
 }
