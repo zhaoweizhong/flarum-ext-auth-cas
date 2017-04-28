@@ -13,7 +13,7 @@
 use Flarum\Forum\AuthenticationResponseFactory;
 use Flarum\Forum\Controller\AbstractOAuth2Controller;
 use Flarum\Settings\SettingsRepositoryInterface;
-use Zhaoweizhong\Auth\CAS\Provider\CAS;
+use League\OAuth2\Client\Provider\CAS;
 use League\OAuth2\Client\Provider\ResourceOwnerInterface;
 
 class CASAuthController extends AbstractOAuth2Controller
@@ -50,7 +50,7 @@ class CASAuthController extends AbstractOAuth2Controller
      */
     protected function getAuthorizationUrlOptions()
     {
-        return ['scope' => ['user:email']];
+        return ['scope' => []];
     }
 
     /**
@@ -76,7 +76,7 @@ class CASAuthController extends AbstractOAuth2Controller
 
     protected function getEmailFromApi()
     {
-        $url = $this->provider->apiDomain.'/cas/oauth2.0/profile';
+        $url = $this->provider->domain.'/cas/oauth2.0/profile';
 
         $email = $this->provider->getResponse(
             $this->provider->getAuthenticatedRequest('GET', $url, $this->token)

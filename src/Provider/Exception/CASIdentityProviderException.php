@@ -1,9 +1,8 @@
 <?php
 
-namespace Zhaoweizhong\Auth\CAS\Provider\Exception;
+namespace League\OAuth2\Client\Provider\Exception;
 
 use Psr\Http\Message\ResponseInterface;
-use League\OAuth2\Client\Provider\Exception\IdentityProviderException;
 
 class CASIdentityProviderException extends IdentityProviderException
 {
