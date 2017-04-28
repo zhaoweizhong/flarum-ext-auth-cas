@@ -41,7 +41,7 @@ class CASResourceOwner implements ResourceOwnerInterface
      */
     public function getId()
     {
-        return $this->getValueByKey($this->response, 'id');
+        return null;
     }
 
     /**
@@ -51,7 +51,7 @@ class CASResourceOwner implements ResourceOwnerInterface
      */
     public function getEmail()
     {
-        return $this->getValueByKey($this->response, 'id');
+        return null;
     }
 
     /**
@@ -61,7 +61,7 @@ class CASResourceOwner implements ResourceOwnerInterface
      */
     public function getName()
     {
-        return $this->getValueByKey($this->response, 'id');
+        return null;
     }
 
     /**
@@ -71,7 +71,7 @@ class CASResourceOwner implements ResourceOwnerInterface
      */
     public function getNickname()
     {
-        return $this->getValueByKey($this->response, 'name');
+        return null;
     }
 
     /**
