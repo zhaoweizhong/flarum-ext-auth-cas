@@ -68,8 +68,14 @@ class CASAuthController extends AbstractOAuth2Controller
      */
     protected function getSuggestions(ResourceOwnerInterface $resourceOwner)
     {
+        $url = $this->provider->domain.'/cas/oauth2.0/profile';
+
+        $name = $this->provider->getResponse(
+            $this->provider->getAuthenticatedRequest('GET', $url, $this->token)
+        );
+
         return [
-            'username' => $resourceOwner->getNickname(),
+            'username' => $name['attributes']['name'],
             'avatarUrl' => 'https://bbs.sustech.net/assets/avatars/default.jpg'
         ];
     }
@@ -82,6 +88,6 @@ class CASAuthController extends AbstractOAuth2Controller
             $this->provider->getAuthenticatedRequest('GET', $url, $this->token)
         );
 
-            return $email['id'];
+            return $email['attributes']['email'];
     }
 }
