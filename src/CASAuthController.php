@@ -75,7 +75,7 @@ class CASAuthController extends AbstractOAuth2Controller
         );
 
         return [
-            'username' => $name['attributes']['name'],
+            'username' => $this->$name['attributes']['name'],
             'avatarUrl' => 'https://bbs.sustech.net/assets/avatars/default.jpg'
         ];
     }
