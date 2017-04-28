@@ -1,12 +1,13 @@
 <?php
 
-namespace League\OAuth2\Client\Provider;
+namespace Zhaoweizhong\Auth\CAS\Provider;
 
-use League\OAuth2\Client\Provider\Exception\CASIdentityProviderException;
+use Zhaoweizhong\Auth\CAS\Provider\Exception\CASIdentityProviderException;
 use League\OAuth2\Client\Token\AccessToken;
 use League\OAuth2\Client\Tool\BearerAuthorizationTrait;
 use Psr\Http\Message\ResponseInterface;
 use League\OAuth2\Client;
+use League\OAuth2\Client\Provider\AbstractProvider;
 use League\OAuth2\Client\Provider\Exception\IdentityProviderException;
 
 
@@ -52,6 +53,7 @@ class CAS extends AbstractProvider
      */
     public function getResourceOwnerDetailsUrl(AccessToken $token)
     {
+
         return $this->domain.'/cas/oauth2.0/profile';
     }
 

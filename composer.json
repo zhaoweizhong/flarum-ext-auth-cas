@@ -19,14 +19,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Zhaoweizhong\\Auth\\CAS\\": "src/",
-            "League\\OAuth2\\Client\\Provider\\": "src/"
+            "Zhaoweizhong\\Auth\\CAS\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Zhaoweizhong\\Auth\\CAS\\": "src/",
-            "League\\OAuth2\\Client\\Provider\\": "src/Provider"
+            "Zhaoweizhong\\Auth\\CAS\\": "src/"
         }
     },
     "extra": {
